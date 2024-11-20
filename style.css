@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+}
+
+/* Tambahkan style ini di file style.css */
+
+body.welcome-background{
+    background-image: url('images/Welcome_page.png'); /* Path gambar background */
+    background-size: cover;         /* Agar gambar menyesuaikan ukuran layar */
+    background-repeat: no-repeat;   /* Mencegah pengulangan gambar */
+    background-position: center;    /* Mengatur posisi gambar di tengah */
+    background-attachment: fixed;   /* Membuat gambar tetap saat di-scroll */
+    color: #080808;
+    margin: 0;
+    padding: 0;
+}
+.welcome-container {
+    padding: 50px 20px;  /* Tambahkan padding di atas untuk menghindari navbar menutupi teks */
+    text-align: justify;
+    border : 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 0px;
+    margin: auto;
+    margin-top:300px;
+    width : 500px;
+}
+
+.welcome-container h1 {
+    font-size: 2em;
+    color: #333;
+}
+.welcome-container p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Bagian Chef */
+.chef-section {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+}
+
+.chef-section h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+}
+
+.chef-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+}
+.chef-card:hover {
+    transform: translateY(-10px);
+}
+.chef-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+}
+
+.chef-card img {
+    width: 200px;  /* Ukuran gambar lebih kecil */
+    height: 200px;  /* Membuat gambar berbentuk bulat */
+    border-radius: 50%;  /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover;  /* Memastikan gambar mengisi lingkaran dengan baik */
+    cursor: pointer;
+}
+
+body.index-background {
+    background-image: url('images/Menu2_page.png'); /* Path gambar background */
+    background-size: cover;         /* Agar gambar menyesuaikan ukuran layar */
+    background-repeat: no-repeat;   /* Mencegah pengulangan gambar */
+    background-position: center;    /* Mengatur posisi gambar di tengah */
+    background-attachment: fixed;   /* Membuat gambar tetap saat di-scroll */
+    color: #080808;                    /* Contoh: mengubah warna teks agar kontras */
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color:#fff;
+}
+
+input[type="text"], button {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #100f0f;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #893616;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    gap: 20px;
+    align-self: center;
+
+}
+
+button:hover {
+    background-color: #2980b9;
+    gap: 20 px;
+    align-self: center;
+
+}
+
+.button2 {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #893616;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: #893616;
+    
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.button2:hover {
+    background-color: #2980b9;
+}
+
+.ulasan{
+    color: #333;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #db7f27;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-item {
+    margin: 2 15px;
+    color: #fff;
+}
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Category filter */
+.category-filter select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-item {
+    max-width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item h2, .menu-item p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.menu-image {
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background:#893616;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .menu-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+/* CSS untuk tampilan halaman review */
+
+/* Container untuk tampilan review */
+.review {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 300px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.isi-keranjang{
+    color: white;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.review-image-container {
+    margin: 20px 0;
+}
+
+.review-image {
+    width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color: white;
+    margin: 10px 0;
+}
+
+.rating {
+    font-size: 24px;
+    /* Ukuran bintang */
+    color: #333;
+    /* Warna bintang kosong (abu-abu) */
+}
+
+.rating .filled {
+    color: gold;
+    /* Warna emas untuk bintang yang terisi */
+}
+
+button {
+    display: center;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left : 250px;
+    margin-right :250px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Form input untuk ulasan */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Tombol untuk menutup review */
+.button-tutup-review {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button-tutup-review:hover {
+    background-color: #e53935;
+}
+
+/* Responsif untuk tampilan layar kecil */
+@media (max-width: 768px) {
+    .review {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .rating-input label {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+.button-tutup-review {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #462bde;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.button-tutup-review:hover {
+    background-color: #0056b3;
+    background: white;
+}
+
+.keranjang{
+    color: white;
+}
+
+
