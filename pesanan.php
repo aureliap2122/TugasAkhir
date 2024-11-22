@@ -23,12 +23,12 @@ function tambahPesanan($namaMenu)
         $harga = $hargaMenu[$namaMenu]['harga'];
         $gambar = $hargaMenu[$namaMenu]['gambar'];
 
-        // Check if the cart exists in the session
+        //pengkondisian if untuk mengecheck keranjang
         if (!isset($_SESSION['keranjang'])) {
             $_SESSION['keranjang'] = [];
         }
 
-        // Check if the item already exists in the cart
+        // perulangan 
         $itemExists = false;
         foreach ($_SESSION['keranjang'] as &$item) {
             if ($item['nama'] === $namaMenu) {
@@ -38,7 +38,6 @@ function tambahPesanan($namaMenu)
             }
         }
 
-        // If the item is not in the cart, add it
         if (!$itemExists) {
             $_SESSION['keranjang'][] = [
                 'nama' => $namaMenu,
@@ -57,7 +56,6 @@ function updatePesanan($index, $action)
             $_SESSION['keranjang'][$index]['jumlah']++;
         } elseif ($action === 'decrease') {
             $_SESSION['keranjang'][$index]['jumlah']--;
-            // Hapus item jika jumlahnya kurang dari 1
             if ($_SESSION['keranjang'][$index]['jumlah'] <= 0) {
                 unset($_SESSION['keranjang'][$index]);
             }
@@ -65,12 +63,11 @@ function updatePesanan($index, $action)
     }
 }
 
-// Logika untuk menangani aksi
 if (isset($_POST['action']) && isset($_POST['index'])) {
     $index = intval($_POST['index']);
     $action = $_POST['action'];
     updatePesanan($index, $action);
-    header('Location: index.php?action=pesanan'); // Redirect kembali ke halaman keranjang
+    header('Location: index.php?action=pesanan'); 
     exit;
 }
 ?>

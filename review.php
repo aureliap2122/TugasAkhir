@@ -84,22 +84,6 @@
                 echo "<img src='" . $review[$namaMenu]['gambar'] . "' alt='Gambar " . htmlspecialchars($namaMenu) . "' class='review-image'>";
                 echo "</div>";
 
-                // menampilkan menu
-                if (isset($_SESSION['ulasan'][$namaMenu])) {
-                    echo "<ul>";
-                    foreach ($_SESSION['ulasan'][$namaMenu] as $ulasanData) {
-                        if (is_array($ulasanData) && isset($ulasanData['ulasan'], $ulasanData['rating'])) {
-                            echo "<li>" . htmlspecialchars($ulasanData['ulasan']) . " - <strong>Rating:</strong> ";
-                            for ($i = 1; $i <= 5; $i++) {
-                                echo $i <= $ulasanData['rating'] ? "&#9734;" : "&#9733;";
-                            }
-                            echo "</li>";
-                        }
-                    }
-                    echo "</ul>";
-                }
-
-                //menampilkan rating bintang
                 echo "<div class='rating'>";
                 $rating = $review[$namaMenu]['rating'];
                 for ($i = 1; $i <= 5; $i++) {
@@ -111,25 +95,9 @@
                 }
                 echo "</div>";
             }
-            //tombol tutup review
             echo "<a href='index.php' class='button-tutup-review'>Tutup Review</a>";
             echo "</div>";
         }
-
-        // Save user review to session
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['ulasan']) && isset($_POST['rating'])) {
-            $ulasan = trim($_POST['ulasan']);
-            $rating = (int)$_POST['rating'];
-
-            if (!isset($_SESSION['ulasan'][$menu])) {
-                $_SESSION['ulasan'][$menu] = [];
-            }
-
-            // Save the review and rating in the session
-            $_SESSION['ulasan'][$menu][] = ['ulasan' => $ulasan, 'rating' => $rating];
-        }
-
-        // Call the function with the selected menu item
         tampilkanReview($menu);
     } else {
         echo "<p>Menu tidak ditemukan.</p>";

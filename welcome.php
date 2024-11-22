@@ -13,7 +13,7 @@ session_start();
 </head>
 
 <body class="welcome-background">
-    <!-- Navbar Sticky -->
+    <!-- Navbar -->
     <div class="navbar sticky-top">
         <div class="navbar-item"><a href="welcome.php">Home</a></div>
         <div class="navbar-item"><a href="index.php">Menu</a></div>
@@ -35,13 +35,11 @@ session_start();
         <h2>Tim Chef Kami</h2>
         <p>Kami memiliki chef berpengalaman dengan spesialisasi dalam masakan Korea...</p>
         <div class="chef-grid">
-            <!-- Chef Card 1 -->
             <div class="chef-card">
                 <img src="images/chenle.jpg">
                 <h3>Chef Chenle Lee</h3>
                 <p>Chef Chenle Lee adalah seorang ahli kuliner berbakat asal Korea Selatan yang merupakan lulusan dari Le Cordon Bleu Seoul, salah satu akademi seni kuliner terbaik di dunia yang dikenal sebagai pencetak chef-chef ternama. Dengan latar belakang pendidikan yang kuat di seni makanan Korea, Chef Chenle Lee telah menguasai teknik memasak tradisional dan modern, menciptakan hidangan yang menggabungkan cita rasa autentik dengan sentuhan inovatif. </p> </a>
             </div>
-            <!-- Chef Card 2 -->
             <div class="chef-card">
                 <img src="images/jimmy_chef.jpeg">
                 <h3>Chef Jimmy Seo</h3>

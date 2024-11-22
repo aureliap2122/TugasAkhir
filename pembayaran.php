@@ -2,11 +2,9 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-// Fungsi untuk menampilkan halaman pembayaran
 function tampilkanPembayaran() {
     echo "<h2>Halaman Pembayaran</h2>";
 
-    // Cek apakah keranjang belanja kosong
     if (empty($_SESSION['keranjang'])) {
         echo "<p>Keranjang belanja kosong. Silakan tambahkan item ke keranjang sebelum melakukan pembayaran.</p>";
         echo "<a href='index.php' class='button'>Kembali ke Menu</a>";
@@ -31,9 +29,7 @@ function tampilkanPembayaran() {
     echo "</div>";
 }
 
-// Fungsi untuk memproses pembayaran
 function prosesPembayaran() {
-    // Kosongkan keranjang setelah pembayaran
     $_SESSION['keranjang'] = [];
     echo "<p>Pembayaran berhasil! Terima kasih telah memesan di Korean Restro.</p>";
     echo "<a href='index.php' class='button'>Kembali ke Menu</a>";
